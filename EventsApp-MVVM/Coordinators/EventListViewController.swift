@@ -6,8 +6,11 @@
 //
 
 import UIKit
+import CoreData
 
 class EventListViewController: UIViewController {
+    
+    private let coreDoreManager = CoreDataManager()
 
     static func instantiate() -> EventListViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: .main)
@@ -19,6 +22,8 @@ class EventListViewController: UIViewController {
         super.viewDidLoad()
         
         setupViews()
+        coreDoreManager.saveEvent(name: "New Year", date: Date(), image: #imageLiteral(resourceName: "new-year"))
+        print("DEBUG: Events: \(coreDoreManager.fetchEvents())")
     }
     
     //MARK: - Helper Functions
