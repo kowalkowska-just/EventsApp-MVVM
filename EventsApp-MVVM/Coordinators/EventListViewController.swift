@@ -10,8 +10,8 @@ import CoreData
 
 class EventListViewController: UIViewController {
     
-    private let coreDoreManager = CoreDataManager()
-
+    var viewModel: EventListViewModel!
+    
     static func instantiate() -> EventListViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: .main)
         let controller = storyboard.instantiateViewController(identifier: "EventListViewController") as! EventListViewController
@@ -22,24 +22,22 @@ class EventListViewController: UIViewController {
         super.viewDidLoad()
         
         setupViews()
-        coreDoreManager.saveEvent(name: "New Year", date: Date(), image: #imageLiteral(resourceName: "new-year"))
-        print("DEBUG: Events: \(coreDoreManager.fetchEvents())")
     }
     
     //MARK: - Helper Functions
     
     private func setupViews() {
         let plusImage = UIImage(systemName: "plus.circle.fill")
-        let barButtonItem = UIBarButtonItem(image: plusImage, style: .plain, target: self, action: #selector(tappedRightBarButton))
+        let barButtonItem = UIBarButtonItem(image: plusImage, style: .plain, target: self, action: #selector(tappedAddEventButton))
         barButtonItem.tintColor = .primary
         navigationItem.rightBarButtonItem = barButtonItem
-        navigationItem.title = "Events"
+        navigationItem.title = viewModel.title
         navigationController?.navigationBar.prefersLargeTitles = true
     }
 
     //MARK: - Selectors
     
-    @objc private func tappedRightBarButton() {
-        print("DEBUG: Tapped right bar button.")
+    @objc private func tappedAddEventButton() {
+        viewModel.tappedAddEvent()
     }
 }
