@@ -9,6 +9,10 @@ import UIKit
 
 final class AddEventViewModel {
     
+    enum Cell {
+        case titleSubtitle(TitleSubtitleCellViewModel)
+    }
+    
     var coordinator: AddEventCoordinator?
     
     func viewDidDisappear() {

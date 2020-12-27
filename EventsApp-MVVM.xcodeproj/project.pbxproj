@@ -11,6 +11,8 @@
 		D17ADCCB2597C90F00D93C68 /* AddEventCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17ADCCA2597C90F00D93C68 /* AddEventCoordinator.swift */; };
 		D17ADCD02597D1B000D93C68 /* AddEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17ADCCF2597D1B000D93C68 /* AddEventViewController.swift */; };
 		D17ADCDC2597E72C00D93C68 /* AddEventViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17ADCDB2597E72C00D93C68 /* AddEventViewModel.swift */; };
+		D17ADCE5259929F800D93C68 /* TitleSubtitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17ADCE4259929F800D93C68 /* TitleSubtitleCell.swift */; };
+		D17ADCEA25992A1000D93C68 /* TitleSubtitleCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17ADCE925992A1000D93C68 /* TitleSubtitleCellViewModel.swift */; };
 		D18172E225953FD800641B22 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18172E125953FD800641B22 /* CoreDataManager.swift */; };
 		D196603E2592AC45007F4C42 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D196603D2592AC45007F4C42 /* AppDelegate.swift */; };
 		D19660402592AC45007F4C42 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D196603F2592AC45007F4C42 /* SceneDelegate.swift */; };
@@ -48,6 +50,8 @@
 		D17ADCCA2597C90F00D93C68 /* AddEventCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventCoordinator.swift; sourceTree = "<group>"; };
 		D17ADCCF2597D1B000D93C68 /* AddEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventViewController.swift; sourceTree = "<group>"; };
 		D17ADCDB2597E72C00D93C68 /* AddEventViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventViewModel.swift; sourceTree = "<group>"; };
+		D17ADCE4259929F800D93C68 /* TitleSubtitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleSubtitleCell.swift; sourceTree = "<group>"; };
+		D17ADCE925992A1000D93C68 /* TitleSubtitleCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleSubtitleCellViewModel.swift; sourceTree = "<group>"; };
 		D18172E125953FD800641B22 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		D196603A2592AC45007F4C42 /* EventsApp-MVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "EventsApp-MVVM.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D196603D2592AC45007F4C42 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -94,13 +98,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		D17ADCD42597D1E700D93C68 /* ViewModel */ = {
+		D17ADCD42597D1E700D93C68 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
 				D17ADCC52597C6AB00D93C68 /* EventListViewModel.swift */,
 				D17ADCDB2597E72C00D93C68 /* AddEventViewModel.swift */,
+				D17ADCE925992A1000D93C68 /* TitleSubtitleCellViewModel.swift */,
 			);
-			path = ViewModel;
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		D17ADCE3259929C800D93C68 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D17ADCE4259929F800D93C68 /* TitleSubtitleCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		D19660312592AC45007F4C42 = {
@@ -126,9 +139,10 @@
 		D196603C2592AC45007F4C42 /* EventsApp-MVVM */ = {
 			isa = PBXGroup;
 			children = (
+				D17ADCE3259929C800D93C68 /* Views */,
 				D196608D259533DA007F4C42 /* Coordinators */,
 				D19660982595342E007F4C42 /* Controllers */,
-				D17ADCD42597D1E700D93C68 /* ViewModel */,
+				D17ADCD42597D1E700D93C68 /* ViewModels */,
 				D196609425953422007F4C42 /* Extension */,
 				D196603D2592AC45007F4C42 /* AppDelegate.swift */,
 				D196603F2592AC45007F4C42 /* SceneDelegate.swift */,
@@ -317,6 +331,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D17ADCEA25992A1000D93C68 /* TitleSubtitleCellViewModel.swift in Sources */,
+				D17ADCE5259929F800D93C68 /* TitleSubtitleCell.swift in Sources */,
 				D19660712592AD3E007F4C42 /* AppCoordinator.swift in Sources */,
 				D19660842592B111007F4C42 /* EventListViewController.swift in Sources */,
 				D19660892592B58E007F4C42 /* Extension.swift in Sources */,
