@@ -17,7 +17,7 @@ final class TitleSubtitleCell: UITableViewCell {
     private let padding: CGFloat = 15
     
     private let datePickerView = UIDatePicker()
-    private let toolbar = UIToolbar(frame: .init(x: 0, y: 0, width: 100, height: 100))
+    private let toolbar = UIToolbar(frame: .init(x: 0, y: 0, width: 100, height: 40))
     
     private var viewModel: TitleSubtitleCellViewModel?
     
@@ -66,11 +66,13 @@ final class TitleSubtitleCell: UITableViewCell {
             $0.translatesAutoresizingMaskIntoConstraints = false
         }
         
+        doneButton.tintColor = .black
+
         toolbar.setItems([doneButton], animated: false)
+        
         datePickerView.datePickerMode = .date
-        if #available(iOS 13.4, *) {
-            datePickerView.preferredDatePickerStyle = .compact
-        }
+        datePickerView.preferredDatePickerStyle = .wheels
+        datePickerView.backgroundColor = .white
         
         photoImageView.backgroundColor = UIColor.black.withAlphaComponent(0.4)
         photoImageView.layer.cornerRadius = 10
