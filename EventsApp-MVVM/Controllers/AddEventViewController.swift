@@ -82,8 +82,6 @@ extension AddEventViewController: UITableViewDataSource {
             cell.update(with: titleSubtitleCellViewModel)
             cell.subtitleTextFiled.delegate = self
             return cell
-        case .titleImage:
-            return UITableViewCell()
         }
     }
 }
