@@ -9,6 +9,8 @@ import UIKit
 
 final class AddEventCoordinator: Coordinator {
     
+    //MARK: - Properties
+    
     private(set) var childCoordinators: [Coordinator] = []
     private let navigationController: UINavigationController
     private var modalNavigationController: UINavigationController?
@@ -16,9 +18,13 @@ final class AddEventCoordinator: Coordinator {
     
     var parentCoordinator: EventListCoordinator?
     
+    //MARK: - Lifecycle
+    
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
     }
+    
+    //MARK: - Helper Functions
     
     func start() {
         //create navigation controller
@@ -29,7 +35,7 @@ final class AddEventCoordinator: Coordinator {
         self.modalNavigationController?.setViewControllers([addEventViewController], animated: false)
         
         //create add event view model
-        let addEventViewModel = AddEventViewModel()
+        let addEventViewModel = AddEventViewModel(cellBuilder: EventsCellBuilder(), coreDataManager: CoreDataManager())
         addEventViewModel.coordinator = self
         addEventViewController.viewModel = addEventViewModel
         
@@ -39,8 +45,12 @@ final class AddEventCoordinator: Coordinator {
         }
     }
     
-    func didFinishAddEvent() {
+    func didFinish() {
         parentCoordinator?.childDidFinish(self)
+    }
+    
+    func didFinishSaveEvent() {
+        navigationController.dismiss(animated: true, completion: nil)
     }
     
     func showImagePicker(completion: @escaping(UIImage) -> Void) {

@@ -14,6 +14,7 @@
 		D17ADCE5259929F800D93C68 /* TitleSubtitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17ADCE4259929F800D93C68 /* TitleSubtitleCell.swift */; };
 		D17ADCEA25992A1000D93C68 /* TitleSubtitleCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17ADCE925992A1000D93C68 /* TitleSubtitleCellViewModel.swift */; };
 		D17ADCF0259A600900D93C68 /* ImagePickerCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17ADCEF259A600900D93C68 /* ImagePickerCoordinator.swift */; };
+		D17ADCF8259A7E5000D93C68 /* EventsCellBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17ADCF7259A7E5000D93C68 /* EventsCellBuilder.swift */; };
 		D18172E225953FD800641B22 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18172E125953FD800641B22 /* CoreDataManager.swift */; };
 		D196603E2592AC45007F4C42 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D196603D2592AC45007F4C42 /* AppDelegate.swift */; };
 		D19660402592AC45007F4C42 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D196603F2592AC45007F4C42 /* SceneDelegate.swift */; };
@@ -54,6 +55,7 @@
 		D17ADCE4259929F800D93C68 /* TitleSubtitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleSubtitleCell.swift; sourceTree = "<group>"; };
 		D17ADCE925992A1000D93C68 /* TitleSubtitleCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleSubtitleCellViewModel.swift; sourceTree = "<group>"; };
 		D17ADCEF259A600900D93C68 /* ImagePickerCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerCoordinator.swift; sourceTree = "<group>"; };
+		D17ADCF7259A7E5000D93C68 /* EventsCellBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsCellBuilder.swift; sourceTree = "<group>"; };
 		D18172E125953FD800641B22 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		D196603A2592AC45007F4C42 /* EventsApp-MVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "EventsApp-MVVM.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D196603D2592AC45007F4C42 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 				D196604B2592AC46007F4C42 /* Info.plist */,
 				D196609F2595351C007F4C42 /* EventsApp.xcdatamodeld */,
 				D18172E125953FD800641B22 /* CoreDataManager.swift */,
+				D17ADCF7259A7E5000D93C68 /* EventsCellBuilder.swift */,
 			);
 			path = "EventsApp-MVVM";
 			sourceTree = "<group>";
@@ -348,6 +351,7 @@
 				D17ADCD02597D1B000D93C68 /* AddEventViewController.swift in Sources */,
 				D17ADCC62597C6AB00D93C68 /* EventListViewModel.swift in Sources */,
 				D18172E225953FD800641B22 /* CoreDataManager.swift in Sources */,
+				D17ADCF8259A7E5000D93C68 /* EventsCellBuilder.swift in Sources */,
 				D19660402592AC45007F4C42 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
