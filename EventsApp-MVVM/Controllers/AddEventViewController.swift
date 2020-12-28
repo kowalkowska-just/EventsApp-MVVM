@@ -9,15 +9,19 @@ import UIKit
 
 class AddEventViewController: UIViewController {
 
+    //MARK: - Properties
+    
     var viewModel: AddEventViewModel!
     
     @IBOutlet weak var tableView: UITableView!
     
+    //MARK: - Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.dataSource = self
-        tableView.register(TitleSubtitleCell.self, forCellReuseIdentifier: "TitleSubtitleCell")
+        setupNavigationControllerView()
+        setupTableView()
         
         viewModel.onUpdate = { [weak self] in
             self?.tableView.reloadData()
@@ -31,7 +35,36 @@ class AddEventViewController: UIViewController {
         
         viewModel.viewDidDisappear()
     }
+
+    //MARK: - Helper functions
+    
+    func setupTableView() {
+        tableView.dataSource = self
+        tableView.register(TitleSubtitleCell.self, forCellReuseIdentifier: "TitleSubtitleCell")
+        tableView.tableFooterView = UIView()
+    }
+    
+    func setupNavigationControllerView() {
+        navigationItem.title = viewModel.title
+        navigationController?.navigationBar.prefersLargeTitles = true
+    
+        //to force large title
+        tableView.contentInsetAdjustmentBehavior = .never
+        tableView.setContentOffset(.init(x: 0, y: -1), animated: false)
+        
+        //buttons in navigation controller
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(tappedDone))
+        navigationController?.navigationBar.tintColor = .black
+    }
+    
+    //MARK: - Selectors
+    
+    @objc private func tappedDone() {
+        viewModel.tappedDone()
+    }
 }
+
+    //MARK: - UITableViewDataSource
 
 extension AddEventViewController: UITableViewDataSource {
     
@@ -52,6 +85,4 @@ extension AddEventViewController: UITableViewDataSource {
             return UITableViewCell()
         }
     }
-    
-    
 }

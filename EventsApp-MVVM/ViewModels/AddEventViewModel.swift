@@ -8,7 +8,8 @@
 import UIKit
 
 final class AddEventViewModel {
-    
+
+    let title = "Add"
     var onUpdate: () -> Void = {}
     
     enum Cell {
@@ -38,5 +39,11 @@ final class AddEventViewModel {
     
     func cell(for indexPath: IndexPath) -> Cell {
         return cells[indexPath.row]
+    }
+    
+    func tappedDone() {
+        //extract info from cell view models and save in core data
+        //and tell coordinator to dismiss
+        print("DEBUG: Tapped in Done Button.")
     }
 }

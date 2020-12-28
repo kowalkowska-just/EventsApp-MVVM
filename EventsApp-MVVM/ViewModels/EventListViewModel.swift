@@ -13,7 +13,7 @@ final class EventListViewModel {
     var coordinator: EventListCoordinator?
     
     func tappedAddEvent() {
-        print("DEBUG: Tapped right bar button.")
+        print("DEBUG: Tapped add event bar button.")
         coordinator?.startAddEvent()
     }
 }

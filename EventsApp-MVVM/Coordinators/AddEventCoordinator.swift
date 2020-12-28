@@ -19,8 +19,12 @@ final class AddEventCoordinator: Coordinator {
     }
     
     func start() {
+        //create navigation controller
+        let modalNavigationController = UINavigationController()
+        
         //create add event view controller
         let addEventViewController: AddEventViewController = .instantiate()
+        modalNavigationController.setViewControllers([addEventViewController], animated: false)
         
         //create add event view model
         let addEventViewModel = AddEventViewModel()
@@ -28,14 +32,10 @@ final class AddEventCoordinator: Coordinator {
         addEventViewController.viewModel = addEventViewModel
         
         //present modally controller using navigation controller
-        navigationController.present(addEventViewController, animated: true, completion: nil)
+        navigationController.present(modalNavigationController, animated: true, completion: nil)
     }
     
     func didFinishAddEvent() {
         parentCoordinator?.childDidFinish(self)
-    }
-    
-    deinit {
-        print("DEBUG: Deinit from add event coordinator.")
     }
 }
