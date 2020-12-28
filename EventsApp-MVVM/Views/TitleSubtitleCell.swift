@@ -54,6 +54,8 @@ final class TitleSubtitleCell: UITableViewCell {
         photoImageView.isHidden = viewModel.type != .image
         subtitleTextFiled.isHidden = viewModel.type == .image
         
+        photoImageView.image = viewModel.image
+        
         verticalStackView.spacing = viewModel.type == .image ? padding : verticalStackView.spacing
     }
     
