@@ -9,7 +9,7 @@ import UIKit
 
 final class TitleSubtitleCell: UITableViewCell {
     private let titleLabel = UILabel()
-    private let subtitleTextFiled = UITextField()
+    let subtitleTextFiled = UITextField()
     private let verticalStackView = UIStackView()
     private let padding: CGFloat = 15
     

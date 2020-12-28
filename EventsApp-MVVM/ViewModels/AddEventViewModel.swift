@@ -46,4 +46,13 @@ final class AddEventViewModel {
         //and tell coordinator to dismiss
         print("DEBUG: Tapped in Done Button.")
     }
+
+    func updateCell(indexPath: IndexPath, subtitle: String) {
+        switch cells[indexPath.row] {
+        case .titleSubtitle(let titleSubtitleCellViewModel):
+            titleSubtitleCellViewModel.update(subtitle)
+        case .titleImage:
+            break
+        }
+    }
 }
