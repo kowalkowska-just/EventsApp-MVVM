@@ -9,6 +9,8 @@ import UIKit
 
 class EventListViewController: UIViewController {
     
+    //MARK: - Properties
+    
     var viewModel: EventListViewModel!
     
     @IBOutlet weak var tableView: UITableView!
@@ -19,10 +21,18 @@ class EventListViewController: UIViewController {
         return controller
     }
     
+    //MARK: - Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupViews()
+        setupTableView()
+        
+        viewModel.onUpdate = { [weak self] in
+            self?.tableView.reloadData()
+        }
+        viewModel.viewDidLoad()
     }
     
     //MARK: - Helper Functions
@@ -35,10 +45,33 @@ class EventListViewController: UIViewController {
         navigationItem.title = viewModel.title
         navigationController?.navigationBar.prefersLargeTitles = true
     }
-
+    
+    private func setupTableView() {
+        tableView.dataSource = self
+        tableView.register(EventCell.self, forCellReuseIdentifier: "EventCell")
+    }
+    
     //MARK: - Selectors
     
     @objc private func tappedAddEventButton() {
         viewModel.tappedAddEvent()
+    }
+}
+
+    //MARK: - UITableViewDataSource
+
+extension EventListViewController: UITableViewDataSource {
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return viewModel.numberOfRows()
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        switch viewModel.cell(at: indexPath) {
+        case .event(let eventCellViewModel):
+            let cell = tableView.dequeueReusableCell(withIdentifier: "EventCell", for: indexPath) as! EventCell
+            cell.update(with:  eventCellViewModel)
+            return cell
+        }
     }
 }
