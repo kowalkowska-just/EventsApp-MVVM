@@ -11,6 +11,8 @@ class EventListViewController: UIViewController {
     
     var viewModel: EventListViewModel!
     
+    @IBOutlet weak var tableView: UITableView!
+    
     static func instantiate() -> EventListViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: .main)
         let controller = storyboard.instantiateViewController(identifier: "EventListViewController") as! EventListViewController
