@@ -18,6 +18,9 @@
 		D18172E225953FD800641B22 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18172E125953FD800641B22 /* CoreDataManager.swift */; };
 		D18C1AE0259B60AC00DD97C6 /* EventCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18C1ADF259B60AC00DD97C6 /* EventCellViewModel.swift */; };
 		D18C1AE5259B632600DD97C6 /* EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18C1AE4259B632600DD97C6 /* EventCell.swift */; };
+		D18C1AEA25A0CD5700DD97C6 /* EventDetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18C1AE925A0CD5700DD97C6 /* EventDetailCoordinator.swift */; };
+		D18C1AEF25A0CEFE00DD97C6 /* EventDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18C1AEE25A0CEFE00DD97C6 /* EventDetailViewController.swift */; };
+		D18C1AF425A0E06400DD97C6 /* EventDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18C1AF325A0E06400DD97C6 /* EventDetailViewModel.swift */; };
 		D196603E2592AC45007F4C42 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D196603D2592AC45007F4C42 /* AppDelegate.swift */; };
 		D19660402592AC45007F4C42 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D196603F2592AC45007F4C42 /* SceneDelegate.swift */; };
 		D19660452592AC45007F4C42 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D19660432592AC45007F4C42 /* Main.storyboard */; };
@@ -61,6 +64,9 @@
 		D18172E125953FD800641B22 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		D18C1ADF259B60AC00DD97C6 /* EventCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCellViewModel.swift; sourceTree = "<group>"; };
 		D18C1AE4259B632600DD97C6 /* EventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCell.swift; sourceTree = "<group>"; };
+		D18C1AE925A0CD5700DD97C6 /* EventDetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailCoordinator.swift; sourceTree = "<group>"; };
+		D18C1AEE25A0CEFE00DD97C6 /* EventDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailViewController.swift; sourceTree = "<group>"; };
+		D18C1AF325A0E06400DD97C6 /* EventDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailViewModel.swift; sourceTree = "<group>"; };
 		D196603A2592AC45007F4C42 /* EventsApp-MVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "EventsApp-MVVM.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D196603D2592AC45007F4C42 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D196603F2592AC45007F4C42 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -113,6 +119,7 @@
 				D17ADCDB2597E72C00D93C68 /* AddEventViewModel.swift */,
 				D17ADCE925992A1000D93C68 /* TitleSubtitleCellViewModel.swift */,
 				D18C1ADF259B60AC00DD97C6 /* EventCellViewModel.swift */,
+				D18C1AF325A0E06400DD97C6 /* EventDetailViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -192,6 +199,7 @@
 				D196607B2592B04C007F4C42 /* EventListCoordinator.swift */,
 				D17ADCCA2597C90F00D93C68 /* AddEventCoordinator.swift */,
 				D17ADCEF259A600900D93C68 /* ImagePickerCoordinator.swift */,
+				D18C1AE925A0CD5700DD97C6 /* EventDetailCoordinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -209,6 +217,7 @@
 			children = (
 				D19660832592B111007F4C42 /* EventListViewController.swift */,
 				D17ADCCF2597D1B000D93C68 /* AddEventViewController.swift */,
+				D18C1AEE25A0CEFE00DD97C6 /* EventDetailViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -349,9 +358,12 @@
 				D19660712592AD3E007F4C42 /* AppCoordinator.swift in Sources */,
 				D19660842592B111007F4C42 /* EventListViewController.swift in Sources */,
 				D19660892592B58E007F4C42 /* Extension.swift in Sources */,
+				D18C1AEF25A0CEFE00DD97C6 /* EventDetailViewController.swift in Sources */,
+				D18C1AEA25A0CD5700DD97C6 /* EventDetailCoordinator.swift in Sources */,
 				D19660A12595351D007F4C42 /* EventsApp.xcdatamodeld in Sources */,
 				D17ADCF0259A600900D93C68 /* ImagePickerCoordinator.swift in Sources */,
 				D196607C2592B04C007F4C42 /* EventListCoordinator.swift in Sources */,
+				D18C1AF425A0E06400DD97C6 /* EventDetailViewModel.swift in Sources */,
 				D17ADCDC2597E72C00D93C68 /* AddEventViewModel.swift in Sources */,
 				D18C1AE5259B632600DD97C6 /* EventCell.swift in Sources */,
 				D17ADCCB2597C90F00D93C68 /* AddEventCoordinator.swift in Sources */,

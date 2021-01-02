@@ -68,6 +68,35 @@
             </objects>
             <point key="canvasLocation" x="799" y="119"/>
         </scene>
+        <!--Event Detail View Controller-->
+        <scene sceneID="B6M-n3-68f">
+            <objects>
+                <viewController storyboardIdentifier="EventDetailViewController" id="XmM-iA-2h6" customClass="EventDetailViewController" customModule="EventsApp_MVVM" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EbL-a8-GYh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZRf-Sr-TlV">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="47D-1n-Y0S"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ZRf-Sr-TlV" firstAttribute="top" secondItem="EbL-a8-GYh" secondAttribute="top" id="4qv-tT-dxX"/>
+                            <constraint firstAttribute="bottom" secondItem="ZRf-Sr-TlV" secondAttribute="bottom" id="CEt-RB-Bbb"/>
+                            <constraint firstAttribute="trailing" secondItem="ZRf-Sr-TlV" secondAttribute="trailing" id="KmF-GK-OFT"/>
+                            <constraint firstItem="ZRf-Sr-TlV" firstAttribute="leading" secondItem="EbL-a8-GYh" secondAttribute="leading" id="mUm-t6-dRY"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backgroundImageView" destination="ZRf-Sr-TlV" id="Gdd-qt-poL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WBV-lj-9TG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1454" y="119"/>
+        </scene>
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">
