@@ -21,6 +21,8 @@
 		D18C1AEA25A0CD5700DD97C6 /* EventDetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18C1AE925A0CD5700DD97C6 /* EventDetailCoordinator.swift */; };
 		D18C1AEF25A0CEFE00DD97C6 /* EventDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18C1AEE25A0CEFE00DD97C6 /* EventDetailViewController.swift */; };
 		D18C1AF425A0E06400DD97C6 /* EventDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18C1AF325A0E06400DD97C6 /* EventDetailViewModel.swift */; };
+		D18C1AF925A0FCC600DD97C6 /* TimeRemainingStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18C1AF825A0FCC600DD97C6 /* TimeRemainingStackView.swift */; };
+		D18C1AFE25A116D000DD97C6 /* TimeRemainingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18C1AFD25A116D000DD97C6 /* TimeRemainingViewModel.swift */; };
 		D196603E2592AC45007F4C42 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D196603D2592AC45007F4C42 /* AppDelegate.swift */; };
 		D19660402592AC45007F4C42 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D196603F2592AC45007F4C42 /* SceneDelegate.swift */; };
 		D19660452592AC45007F4C42 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D19660432592AC45007F4C42 /* Main.storyboard */; };
@@ -67,6 +69,8 @@
 		D18C1AE925A0CD5700DD97C6 /* EventDetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailCoordinator.swift; sourceTree = "<group>"; };
 		D18C1AEE25A0CEFE00DD97C6 /* EventDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailViewController.swift; sourceTree = "<group>"; };
 		D18C1AF325A0E06400DD97C6 /* EventDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailViewModel.swift; sourceTree = "<group>"; };
+		D18C1AF825A0FCC600DD97C6 /* TimeRemainingStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeRemainingStackView.swift; sourceTree = "<group>"; };
+		D18C1AFD25A116D000DD97C6 /* TimeRemainingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeRemainingViewModel.swift; sourceTree = "<group>"; };
 		D196603A2592AC45007F4C42 /* EventsApp-MVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "EventsApp-MVVM.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D196603D2592AC45007F4C42 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D196603F2592AC45007F4C42 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -120,6 +124,7 @@
 				D17ADCE925992A1000D93C68 /* TitleSubtitleCellViewModel.swift */,
 				D18C1ADF259B60AC00DD97C6 /* EventCellViewModel.swift */,
 				D18C1AF325A0E06400DD97C6 /* EventDetailViewModel.swift */,
+				D18C1AFD25A116D000DD97C6 /* TimeRemainingViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -129,6 +134,7 @@
 			children = (
 				D17ADCE4259929F800D93C68 /* TitleSubtitleCell.swift */,
 				D18C1AE4259B632600DD97C6 /* EventCell.swift */,
+				D18C1AF825A0FCC600DD97C6 /* TimeRemainingStackView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -353,6 +359,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D17ADCEA25992A1000D93C68 /* TitleSubtitleCellViewModel.swift in Sources */,
+				D18C1AF925A0FCC600DD97C6 /* TimeRemainingStackView.swift in Sources */,
 				D18C1AE0259B60AC00DD97C6 /* EventCellViewModel.swift in Sources */,
 				D17ADCE5259929F800D93C68 /* TitleSubtitleCell.swift in Sources */,
 				D19660712592AD3E007F4C42 /* AppCoordinator.swift in Sources */,
@@ -368,6 +375,7 @@
 				D18C1AE5259B632600DD97C6 /* EventCell.swift in Sources */,
 				D17ADCCB2597C90F00D93C68 /* AddEventCoordinator.swift in Sources */,
 				D196603E2592AC45007F4C42 /* AppDelegate.swift in Sources */,
+				D18C1AFE25A116D000DD97C6 /* TimeRemainingViewModel.swift in Sources */,
 				D17ADCD02597D1B000D93C68 /* AddEventViewController.swift in Sources */,
 				D17ADCC62597C6AB00D93C68 /* EventListViewModel.swift in Sources */,
 				D18172E225953FD800641B22 /* CoreDataManager.swift in Sources */,

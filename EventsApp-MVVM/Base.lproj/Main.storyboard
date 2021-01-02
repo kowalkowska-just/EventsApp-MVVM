@@ -79,6 +79,14 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZRf-Sr-TlV">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="110" placeholderIntrinsicHeight="200" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="woM-KJ-W6H">
+                                <rect key="frame" x="152" y="348" width="110" height="200"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="110" placeholderIntrinsicHeight="200" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="LjK-tq-64d" customClass="TimeRemainingStackView" customModule="EventsApp_MVVM" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="110" height="200"/>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="47D-1n-Y0S"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -86,11 +94,14 @@
                             <constraint firstItem="ZRf-Sr-TlV" firstAttribute="top" secondItem="EbL-a8-GYh" secondAttribute="top" id="4qv-tT-dxX"/>
                             <constraint firstAttribute="bottom" secondItem="ZRf-Sr-TlV" secondAttribute="bottom" id="CEt-RB-Bbb"/>
                             <constraint firstAttribute="trailing" secondItem="ZRf-Sr-TlV" secondAttribute="trailing" id="KmF-GK-OFT"/>
+                            <constraint firstItem="woM-KJ-W6H" firstAttribute="centerX" secondItem="EbL-a8-GYh" secondAttribute="centerX" id="epZ-iE-FBm"/>
                             <constraint firstItem="ZRf-Sr-TlV" firstAttribute="leading" secondItem="EbL-a8-GYh" secondAttribute="leading" id="mUm-t6-dRY"/>
+                            <constraint firstItem="woM-KJ-W6H" firstAttribute="centerY" secondItem="EbL-a8-GYh" secondAttribute="centerY" id="puZ-Xa-qbT"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="backgroundImageView" destination="ZRf-Sr-TlV" id="Gdd-qt-poL"/>
+                        <outlet property="timeRemainingStackView" destination="LjK-tq-64d" id="PJZ-9O-COe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WBV-lj-9TG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
