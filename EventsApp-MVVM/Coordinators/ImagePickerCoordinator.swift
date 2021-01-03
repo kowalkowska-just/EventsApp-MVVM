@@ -13,7 +13,8 @@ final class ImagePickerCoordinator: NSObject, Coordinator {
     
     private(set) var childCoordinators: [Coordinator] = []
     private let navigationController: UINavigationController
-    var parentCoordinator: AddEventCoordinator?
+    var parentCoordinator: Coordinator?
+    var onFinishPicking: (UIImage) -> Void = { _ in }
     
     //MARK: - Lifecycle
     
@@ -35,7 +36,7 @@ final class ImagePickerCoordinator: NSObject, Coordinator {
 extension ImagePickerCoordinator: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
-            parentCoordinator?.didFinishPicking(image)
+            onFinishPicking(image)
         }
         parentCoordinator?.childDidFinish(self)
     }

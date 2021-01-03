@@ -10,7 +10,7 @@ import UIKit
 
 final class EventDetailCoordinator: Coordinator {
     
-    let childCoordinators: [Coordinator] = []
+    private(set) var childCoordinators: [Coordinator] = []
     
     private let navigationController: UINavigationController
     private let eventID: NSManagedObjectID
@@ -31,5 +31,11 @@ final class EventDetailCoordinator: Coordinator {
     
     func didFinish() {
         parentCoordinator?.childDidFinish(self)
+    }
+    
+    func onEditEvent(_ event: Event) {
+        let editEventCoordinator = EditEventCoordinator(event: event, navigationController: navigationController)
+        childCoordinators.append(editEventCoordinator)
+        editEventCoordinator.start()
     }
 }
