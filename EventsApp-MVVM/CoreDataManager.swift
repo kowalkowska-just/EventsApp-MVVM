@@ -41,6 +41,22 @@ final class CoreDataManager {
         }
     }
     
+    func updateEvent(event: Event, name: String, date: Date, image: UIImage) {
+        event.setValue(name, forKey: "name")
+        
+        let resizedImage = image.sameAspectRatio(newHeight: 250)
+        
+        let imageData = resizedImage.jpegData(compressionQuality: 1)
+        event.setValue(imageData, forKey: "image")
+        event.setValue(date, forKey: "date")
+        
+        do {
+            try moc.save()
+        } catch {
+            print("DEBUG: Failed saving data in Event with error: \(error.localizedDescription)")
+        }
+    }
+    
     func fetchEvents() -> [Event] {
         do {
             let fetchRequest = NSFetchRequest<Event>(entityName: "Event")
