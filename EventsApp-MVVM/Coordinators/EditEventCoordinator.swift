@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol EventUpdatingCoordinator {
+    func onUpdateEvent()
+}
+
 final class EditEventCoordinator: Coordinator {
     
     //MARK: - Properties
@@ -16,7 +20,7 @@ final class EditEventCoordinator: Coordinator {
     private let event: Event
     private var completion: (UIImage) -> Void = { _ in}
     
-    var parentCoordinator: EventDetailCoordinator?
+    var parentCoordinator: (EventUpdatingCoordinator & Coordinator)?
     
     //MARK: - Lifecycle
     
